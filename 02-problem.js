@@ -1,20 +1,24 @@
+//2. Write a function that takes a string, and returns the character that is most commonly used in the string
+
 function find(string) {
-    let charCount = {};
+    let charcount = {};
     let marchar = '';
-    let maxCount = 0;
+    let maxcount = 0;
     for (i = 0; i < string.length; i++) {
         let char = string[i];
-        if (charCount[char]) {
-            charCount[char]++;
+        if (charcount[char]) {
+            charcount[char]++;
         } else {
-            charCount[char] = 1;
+            charcount[char] = 1;
         }
-        if (charCount[char] > maxCount) {
-            maxCount = charCount[char];
+        if (charcount[char] > maxcount) {
+            maxcount = charcount[char];
             marchar = char;
         }
     }
     return marchar;
 }
-console.log(find("nitin"));
+console.log(find("nitittn"));
+
+// output- t
               
