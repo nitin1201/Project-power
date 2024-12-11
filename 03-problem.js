@@ -8,22 +8,13 @@ function anagram(str1, str2) {
   let b = str2.length;
   if (a != b)
     return false;
-  str1.sort();
-  str2.sort();
-  for (let i = 0; i <= b; i++)
-    if (str1[i] != str2[i])
-      return false;
+  let ab=str1.split("").sort();
+  let ac=str2.split("").sort();
+  
+  for (let i = 0; i <= b; i++) 
+    if (ab[i] != ac[i]) 
+        return false;
 
   return true;
 }
-let str1 = "nitin".split("");
-let str2 = "niitn".split("");
-if (anagram(str1, str2))
-  console.log("anagram");
-else 
-  console.log("not anagram");
-
-// function run(str1){
-//     console.log(str1.split(""))
-//     }
-//     run("youth")
+console.log(anagram ("world","dlrox"));
