@@ -6,17 +6,22 @@
 function anagram(str1, str2) {
   let a = str1.length;
   let b = str2.length;
-  if (a != b) return false;
+  if (a != b)
+    return false;
   str1.sort();
   str2.sort();
-  for (let i = 0; i <= b; i++) if (str1[i] != str2[i]) return false;
+  for (let i = 0; i <= b; i++)
+    if (str1[i] != str2[i])
+      return false;
 
   return true;
 }
 let str1 = "nitin".split("");
 let str2 = "niitn".split("");
-if (anagram(str1, str2)) console.log("anagram");
-else console.log("not anagram");
+if (anagram(str1, str2))
+  console.log("anagram");
+else 
+  console.log("not anagram");
 
 // function run(str1){
 //     console.log(str1.split(""))
